@@ -1,0 +1,285 @@
+{
+  "info": {
+    "_postman_id": "d88f9fc6-52df-4c9b-97e3-b9d7f5c2cf88",
+    "name": "Catalogo y Modulo API",
+    "description": "Colección de Postman para probar los endpoints CRUD de Catalogo y Modulo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Catalogo",
+      "item": [
+        {
+          "name": "Obtener todos los catalogos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/catalogos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "catalogos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener catalogo por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/catalogos/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "catalogos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear nuevo catalogo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"titulo\": \"Nuevo Curso\",\n\"partnerName\": \"Stanford Online\",\n\"categoryName\": \"Cursos\",\n\"duration\": 90,\n\"levelName\": \"Intermedio\",\n\"description\": \"Descripción del nuevo curso\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/catalogos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "catalogos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar catalogo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"titulo\": \"Curso Actualizado\",\n\"partnerName\": \"MIT OpenCourseWare\",\n\"categoryName\": \"Cursos\",\n\"duration\": 120,\n\"levelName\": \"Dificil\",\n\"description\": \"Descripción del curso actualizado\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/catalogos/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "catalogos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar catalogo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/catalogos/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "catalogos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Modulo",
+      "item": [
+        {
+          "name": "Obtener todos los modulos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/modulos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "modulos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener modulo por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/modulos/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "modulos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear nuevo modulo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"titulo\": \"Modulo de Aprendizaje\",\n\"descripcion\": \"Descripción del modulo de aprendizaje\",\n\"submodulos\": [\n{\n\"titulo\": \"Submodulo 1\",\n\"subtitulo\": \"Introducción\",\n\"descripcion\": \"Descripción del submodulo\",\n\"boton\": \"Empezar\"\n}\n]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/modulos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "modulos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar modulo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"titulo\": \"Modulo de Desempeño Actualizado\",\n\"descripcion\": \"Descripción actualizada del modulo de desempeño\",\n\"submodulos\": [\n{\n\"titulo\": \"Submodulo Actualizado\",\n\"subtitulo\": \"Avanzado\",\n\"descripcion\": \"Descripción actualizada\",\n\"boton\": \"Continuar\"\n}\n]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/modulos/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "modulos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar modulo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/modulos/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "modulos",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ]
+}
